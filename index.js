@@ -13,6 +13,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/", urlRoutes);
-app.listen(5050, () => {
-  console.log("Server is Running on port 5050");
+
+const PORT = process.env.PORT || 5050;
+
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
 });
